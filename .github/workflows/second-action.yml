@@ -1,0 +1,13 @@
+name: my second action
+
+on: push
+
+jobs:
+    second_jobs:
+          runs-on: ubuntu-latest
+          steps:
+          - name: wellcome
+            run: echo "wellcome my second action"
+
+          - name: hiden files
+            run: ls -a
