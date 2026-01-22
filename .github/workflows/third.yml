@@ -1,0 +1,21 @@
+name: Hello action
+on: push
+jobs:
+  hello:
+     runs-on: ubuntu-latest
+     steps:
+       - name: github action working
+         run: echo "github action is working"
+       - name: karnel virsion
+         run: uname -a
+       - name: Date
+         run: date
+       - uses: actions/checkout@v4
+       - uses: actions/setup-node@v4
+         with:
+           node-version: 18
+       - name: Install node
+         run: npm install
+       - run: npm test
+         
+        
